@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ recettechef.nom }}</title>
+</head>
+<body>
+<h1>{{ recettechef.nom }}</h1>
+<p>Type: {{ recettechef.type }}</p>
+<p>Description: {{ recettechef.description }}</p>
+<!-- Add more fields as needed -->
+
+{% if recettechef.photo %}
+    <img src="{{ asset('photos/' ~ recettechef.photo) }}" alt="{{ recettechef.nom }} photo">
+{% endif %}
+
+{% if recettechef.video %}
+    <video controls>
+        <source src="{{ asset('uploads/' ~ recettechef.video) }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+{% endif %}
+
+{# Display the image upload form #}
+<form method="post" enctype="multipart/form-data">
+    {{ form_row(imageForm.image) }}
+    <button type="submit">Upload Image</button>
+</form>
+
+{# Display the video upload form #}
+<form method="post" enctype="multipart/form-data">
+    {{ form_row(videoForm.video) }}
+    <button type="submit">Upload Video</button>
+</form>
+</body>
+</html>

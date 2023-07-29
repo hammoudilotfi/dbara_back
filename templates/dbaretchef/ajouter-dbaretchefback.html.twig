@@ -1,0 +1,27 @@
+{# templates/ajouter-dbaretchefback.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Add a New Dbaretchefback</h1>
+
+    {{ form_start(form,{'attr': {'enctype':'multipart/form-data'}}) }}
+    <div>
+        {{ form_label(form.type) }}
+        {{ form_widget(form.type) }}
+    </div>
+    <div>
+        {{ form_label(form.nom) }}
+        {{ form_widget(form.nom) }}
+    </div>
+    <div>
+        {{ form_label(form.description) }}
+        {{ form_widget(form.description) }}
+    </div>
+    <div>
+        {{ form_label(form.photoFile) }}
+        {{ form_widget(form.photoFile, {'attr': {'class':'form-control','name':'photoFile','type':'file'}}) }}
+    </div>
+    <button type="submit">Create</button>
+    {{ form_end(form) }}
+{% endblock %}

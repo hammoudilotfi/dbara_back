@@ -1,0 +1,15 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+api_login_check:
+  path: /api/login_check
+  #methods: [POST]
+get_uploaded_image:
+  path: /uploads/photos/{fileName}
+  controller: App\Controller\YourController::getUploadedFile
+  methods: [GET]
+
+get_uploaded_video:
+  path: /upload/videos/{fileName}
+  controller: App\Controller\YourController::getUploadedFiles
+  methods: [GET]
