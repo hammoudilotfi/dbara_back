@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.form-control.ng-touched.ng-invalid{
+    border-left: 5px solid red;
+}
+.form-control.ng-valid {
+     border-left: 5px solid rgb(4, 224, 4);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import '~bootstrap/dist/css/bootstrap.min.css';

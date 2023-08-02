@@ -1,0 +1,48 @@
+
+<div *ngIf="dbaretchef">
+  <h2>{{ dbaretchef.nom }}------MONTA</h2>
+  <p>{{ dbaretchef.description }}</p>
+  <img [src]="'https://127.0.0.1:8000/' + dbaretchef.photo" alt="{{ dbaretchef.nom }}">
+
+  <!-- <img [src]="dbaretchef.photo" alt="{{ dbaretchef.nom }}"> -->
+  <!-- <img src="https://127.0.0.1:8000/uploads/photos/dbaretchef.photo" alt="Cake Photo" /> -->
+
+
+</div>
+
+<div id="allRecipes">
+  <div id="contenu">
+    <h3>Découvrez et régalez vous avec les meilleures recettes </h3>
+    <!-- <img src="https://127.0.0.1:8000/uploads/photos/dbaretchef.photo" alt="Cake Photo" />
+    <img src="https://127.0.0.1:8000/uploads/photos/crepe-64aadf0f08645.jpg" alt="Cake Photo" />
+    <img src="https://127.0.0.1:8000/uploads/photos/photo-gateaux-647dbdc230048.jpg" alt="Gateaux Photo" /> -->
+
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;" *ngFor="let dbara of data">
+  <!-- <img [src]="dbara.photo" alt="{{ dbara.nom }}"> -->
+  <img [src]="'https://127.0.0.1:8000/' + dbara.photo" alt="{{ dbara.nom }}">
+  <div class="card-body">
+    <i class="fa-regular fa-hourglass-clock"></i>
+    <div class="position2">
+      <mat-icon>restaurant</mat-icon>
+      <span class="mat-icon-third" id="hert">Ingredients: {{ dbara.nombre_ingredient }}</span>
+    </div>
+    <div class="position">
+      <mat-icon class="mat-icon-primar" id="dert">watch_later</mat-icon>
+      <span>Temps de cuisson: {{ dbara.temps_preparation }}</span>
+    </div>
+    <div class="position1">
+      <mat-icon class="mat-icon-second" id="alert">straighten</mat-icon>
+      <span>Niveau de difficulte: {{ dbara.niv_difficulte }}</span>
+    </div>
+    <h5 class="card-title">
+      <p class="nom-recette">{{ dbara.nom }}</p>
+    </h5>
+    <p class="card-text">Description: {{ dbara.description }}</p>
+    <p class="card-text">Ingredients: {{ dbara.ingredients }}</p>
+    <p class="card-text">Apports Nutritifs: {{ dbara.apports_nutritifs }}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>

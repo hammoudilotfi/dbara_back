@@ -1,0 +1,24 @@
+<h1>page recette</h1>
+<h3>Recettes</h3>
+<table class="table table-striped table-hover table-sm">
+    <thead class="thead-dark">
+        <th>#</th>
+        <th>updated-at</th>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Date_creation</th>
+        <th>Niv_difficulter</th>
+        <th>Cost</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let recette of recettes">
+            <td>{{ recette.id }}</td>
+            <td>{{ recette.updated_at }}</td>
+            <td>{{ recette.nom }}</td>
+            <td>{{ recette.description }}</td>
+            <td>{{ recette.date_creation }}</td>
+            <td>{{ recette.niv_difficulte }}</td>
+            <td>{{ recette.cost }}</td>
+        </tr>
+    </tbody>
+</table>

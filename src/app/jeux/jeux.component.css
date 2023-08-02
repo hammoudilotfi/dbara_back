@@ -1,0 +1,8 @@
+.popup {
+    width: 700px;
+    height: 400px;
+  }
+  button {
+    background-color: green;
+    color: white;
+  }  

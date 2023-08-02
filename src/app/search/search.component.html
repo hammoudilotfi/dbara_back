@@ -1,0 +1,4 @@
+<input type="text" [(ngModel)]="searchQuery" (input)="search()" placeholder="Search by name" />
+<ul>
+  <li *ngFor="let item of filteredItems">{{ item.name }}</li>
+</ul>

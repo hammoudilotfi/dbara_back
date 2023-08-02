@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: blue;">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+       <div class="logo">
+        <a href="/">
+          <img src="assets/img/logo.png">
+        </a>
+       </div>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/login">Login </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/DbaretChef">Dbaret El Chef </a>
+          <i class="bx bxs-chevron-down htmlcss-arrow arrow  "></i>
+        </li>
+        
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/user">User </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/recette">Recette</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/jeux"><button type="button" class="btn btn-primary" (click)="openPopup()" >Jeux Concours</button></a>
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Popup Title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Popup content goes here.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item" >
+          <div class="input-group">
+            <div class="form-outline">
+              <input type="search" id="searchInput" class="form-control" [(ngModel)]="searchText" />
+            </div>
+            <button type="button" class="btn btn-primary" (click)="searchByName()">Search</button>
+          </div>
+        </li>
+        <li class="nav-item">
+          <p  class="nav-link"  (click)="onLogout()">Logout</p>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  

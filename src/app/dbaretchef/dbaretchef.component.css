@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .position{
+    position: absolute;
+    top: 100px;
+  }
+  .nom-recette{
+    position: absolute;
+    top: 250px;
+  }
+  .position1{
+    position: absolute;
+    top: 150px;
+  }
+  .position2{
+    position: absolute;
+    top: 50px;
+  }
